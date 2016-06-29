@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.collections.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+
+<Dialog fx:id="dialog"
+	fx:controller="pl.edu.mimuw.forum.ui.controllers.AddDialogController" 
+	xmlns:fx="http://javafx.com/fxml">
+	<dialogPane>
+		<DialogPane prefWidth="400.0" prefHeight="300.0">
+			<stylesheets>
+				<URL value="@/css/styles.css" />
+			</stylesheets>
+			<content>
+			
+				<VBox>
+					<ComboBox fx:id="comboBox" layoutX="10.0" layoutY="20.0" prefWidth="260.0">
+     				 <items>
+      					  <FXCollections fx:factory="observableArrayList">
+          					<String fx:value="Suggestion" />
+      					    <String fx:value="Survey" />
+          					<String fx:value="Task" />
+          					<String fx:value="Comment" />
+      					  </FXCollections>
+      					</items>
+    				</ComboBox>
+					<Label text="User:">						
+						<graphic>
+							<ImageView>
+								<Image url="@../images/user.png" />
+							</ImageView>
+						</graphic>
+					</Label>
+					<TextField fx:id="userField" promptText="Enter user name..." />
+				
+					<Label text="Comment:">
+						<graphic>
+							<ImageView>
+								<Image url="@../images/comment.png" />
+							</ImageView>
+						</graphic>
+					</Label>
+					<TextArea fx:id="commentField" promptText="Enter comment..." />
+					<Label text="Add some content here..."></Label>
+				</VBox>
+			</content>
+		</DialogPane>
+	</dialogPane>
+</Dialog>
